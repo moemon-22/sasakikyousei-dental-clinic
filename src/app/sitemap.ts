@@ -10,7 +10,6 @@ const STATIC_ROUTES = [
   "/treatment/",
   "/process/",
   "/first-visit/",
-  "/booking/",
   "/pricing/",
   "/child/",
   "/adult/",

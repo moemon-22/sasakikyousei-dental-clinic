@@ -26,6 +26,7 @@
     { "source": "/yokohama-orthodontic-dentistry", "destination": "/columns/", "permanent": true },
     { "source": "/yokohama-orthodontic-dentistry/", "destination": "/columns/", "permanent": true },
     { "source": "/yokohama-orthodontic-dentistry/index.html", "destination": "/columns/", "permanent": true },
-    { "source": "/yokohama-orthodontic-dentistry/:slug(faq\\d+)\\.html", "destination": "/columns/:slug/", "permanent": true }
+    { "source": "/yokohama-orthodontic-dentistry/:slug(faq\\d+)\\.html", "destination": "/columns/:slug/", "permanent": true },
+    { "source": "/booking/", "destination": "https://reserve.net-lab.jp/user/facilities/10937/reservation", "permanent": false }
   ]
 }

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { RESERVE_URL } from "@/lib/site";
 
 const DESKTOP_ACTIONS: {
   label: string;
@@ -6,7 +6,7 @@ const DESKTOP_ACTIONS: {
   external?: boolean;
 }[] = [
   { label: "初診相談", href: "#counseling" },
-  { label: "WEB予約", href: "/booking/", external: true },
+  { label: "WEB予約", href: RESERVE_URL, external: true },
   { label: "アクセス", href: "#access" },
   { label: "診療時間", href: "#access" },
 ];
@@ -17,7 +17,7 @@ const MOBILE_ACTIONS: {
   external?: boolean;
 }[] = [
   { label: "TEL", href: "tel:0458712281" },
-  { label: "WEB予約", href: "/booking/", external: true },
+  { label: "WEB予約", href: RESERVE_URL, external: true },
   { label: "初診相談", href: "#counseling" },
   { label: "アクセス", href: "#access" },
 ];
@@ -40,15 +40,17 @@ export default function SideActions() {
         {/* Vertical-writing tiles */}
         {DESKTOP_ACTIONS.map((a) =>
           a.external ? (
-            <Link
+            <a
               key={a.label}
               href={a.href}
+              target="_blank"
+              rel="noopener"
               data-ga-event="reserve_click"
               className="w-12 h-32 bg-[#f4f1ea] text-[#9a998e] hover:bg-[#e9e3d6] hover:text-[#222] transition flex items-center justify-center text-[13px] tracking-[0.25em]"
               style={{ writingMode: "vertical-rl", textOrientation: "mixed" }}
             >
               {a.label}
-            </Link>
+            </a>
           ) : (
             <a
               key={a.label}
@@ -66,14 +68,16 @@ export default function SideActions() {
       <div className="lg:hidden fixed bottom-0 left-0 right-0 z-40 grid grid-cols-4 border-t border-[#e3e3e3]">
         {MOBILE_ACTIONS.map((a) =>
           a.external ? (
-            <Link
+            <a
               key={a.label}
               href={a.href}
+              target="_blank"
+              rel="noopener"
               data-ga-event="reserve_click"
               className="bg-[#f4f1ea] text-[#9a998e] hover:bg-[#e9e3d6] transition flex items-center justify-center min-h-[52px] py-4 text-xs tracking-wider"
             >
               {a.label}
-            </Link>
+            </a>
           ) : (
             <a
               key={a.label}
