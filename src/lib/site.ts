@@ -6,3 +6,6 @@
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.sasakikyousei.com").replace(/\/$/, "");
 export const SITE_NAME = "ささき矯正歯科クリニック";
 export const IS_DEMO = Boolean(process.env.NEXT_PUBLIC_BASE_PATH);
+
+/** 初診相談の WEB 予約（ネットラボ社）。CTA はすべてここへ直接リンクする */
+export const RESERVE_URL = "https://reserve.net-lab.jp/user/facilities/10937/reservation";

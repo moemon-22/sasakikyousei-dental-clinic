@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { RESERVE_URL } from "@/lib/site";
 import SubPageLayout from "@/components/SubPageLayout";
 import PageSection from "@/components/PageSection";
 
@@ -44,9 +44,9 @@ export default function Page() {
             <p className="text-[#9a998e] text-xs tracking-[0.3em] mb-3">ネット予約 ※初診のみ</p>
             <p className="text-[13px] text-[#444] leading-loose mb-4">予約カレンダーからご予約ください。ご相談には40分ほどお時間をいただいているため、ネット予約枠が限られている場合があります。</p>
             <p className="text-[12px] text-[#666] leading-loose mb-4">ご希望のお時間が×の場合でも、お電話で調整できる可能性がございますので一度お電話にてお問合せください。</p>
-            <Link href="/booking/" data-ga-event="reserve_click" className="inline-block bg-[#9a998e] text-white text-sm tracking-widest px-6 py-3 hover:bg-[#b5b4a8] transition">
+            <a href={RESERVE_URL} target="_blank" rel="noopener" data-ga-event="reserve_click" className="inline-block bg-[#9a998e] text-white text-sm tracking-widest px-6 py-3 hover:bg-[#b5b4a8] transition">
               予約カレンダーへ →
-            </Link>
+            </a>
           </div>
         </div>
       </PageSection>
