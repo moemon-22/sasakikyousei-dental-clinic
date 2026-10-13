@@ -11,10 +11,12 @@ import FooterAccess from "@/components/FooterAccess";
 import Sitemap from "@/components/Sitemap";
 import Copyright from "@/components/Copyright";
 import RevealObserver from "@/components/RevealObserver";
+import StructuredData from "@/components/StructuredData";
 
 export default function Home() {
   return (
     <>
+      <StructuredData />
       <RevealObserver />
       <Header />
       <SideActions />
